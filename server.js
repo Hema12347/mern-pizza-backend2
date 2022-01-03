@@ -4,9 +4,10 @@ const cors = require('cors')
 const Pizza = require("./models/pizzaModel");
 
 const app = express();
+app.use(cors())
 const db = require("./db.js");
 app.use(express.json());
-app.use(cors())
+
 const path = require("path");
 const pizzasRoute = require("./routes/pizzasRoute");
 const userRoute = require("./routes/userRoute");
